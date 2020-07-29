@@ -29,3 +29,5 @@ class Solution:
                     res = max(res, heights[top] * (i - s[-1] - 1))
             s.append(i)
         return res
+        # 經典測資: [5, 4, 1, 2]
+        # 第一個0在stack表示heights第1筆的位置，然後減1去取得寬度，可以去避免height一開始就開高走低，寬度卻無法從第1筆開始。最後一個0用來涵蓋最後一筆height的計算
